@@ -84,7 +84,7 @@ function makeBankAccount(initialBalance) {
     deposit(amount) { balance += amount; return balance; },
     withdraw(amount) { balance -= amount; return balance; },
     getBalance() { return balance; }
-  };
+  }
 }
 ```
 

@@ -171,17 +171,17 @@ For each layer: job, why it exists, what happens, data unit name, protocols, dev
 
 ## 3.5 Layer 5 — Session Layer
 
-| Aspect | Detail |
-|---|---|
-| Main job | Open, manage, and close a "conversation" (**session**) between two devices, keeping both sides in sync |
-| Why it exists | Without session tracking, any interruption would force restarting a conversation from scratch |
-| What happens | Establishes a session, tracks state (e.g., login state, progress in a multi-step exchange), coordinates orderly close |
-| Data unit | No distinct standardized name — generally just "data" |
-| Protocols/concepts | NetBIOS, RPC (Remote Procedure Call); in modern practice, session-like behavior (e.g. staying logged in) is often handled at Layer 7 via cookies/tokens |
-| Devices | None — purely software/protocol concept |
-| Analogy | A phone call: dialing/connecting = establishing session; talking = maintaining session; hanging up properly = closing session |
-| Example | Logging into online banking — session tracks that your browser is authenticated across multiple page views |
-| Without it | Every exchange would be treated as a fresh, disconnected interaction with no memory of what happened before; multi-step processes (banking, gaming, video calls) would be very difficult |
+| Aspect             | Detail                                                                                                                                                                                   |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Main job           | Open, manage, and close a "conversation" (**session**) between two devices, keeping both sides in sync                                                                                   |
+| Why it exists      | Without session tracking, any interruption would force restarting a conversation from scratch                                                                                            |
+| What happens       | Establishes a session, tracks state (e.g., login state, progress in a multi-step exchange), coordinates orderly close                                                                    |
+| Data unit          | No distinct standardized name — generally just "data"                                                                                                                                    |
+| Protocols/concepts | NetBIOS, RPC (Remote Procedure Call); in modern practice, session-like behavior (e.g. staying logged in) is often handled at Layer 7 via cookies/tokens                                  |
+| Devices            | None — purely software/protocol concept                                                                                                                                                  |
+| Analogy            | A phone call: dialing/connecting = establishing session; talking = maintaining session; hanging up properly = closing session                                                            |
+| Example            | Logging into online banking — session tracks that your browser is authenticated across multiple page views                                                                               |
+| Without it         | Every exchange would be treated as a fresh, disconnected interaction with no memory of what happened before; multi-step processes (banking, gaming, video calls) would be very difficult |
 
 > **Note:** This is one of the layers where OSI's theoretical model doesn't map cleanly onto real implementations — much session-like behavior today (staying logged in) is implemented at the Application layer (Layer 7) via cookies/session tokens rather than a strictly separate Layer 5 protocol.
 

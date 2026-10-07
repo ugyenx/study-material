@@ -1,4 +1,4 @@
-# Array DSA — Optimized Programs
+k# Array DSA — Optimized Programs
 
 > Reference notes from my DSA practice.  
 > Language: JavaScript  
@@ -233,7 +233,7 @@ function missingNum(arr) {
 ## 11. Move Zeros to the End — Swap Version
 
 ```js
-function moveZero(arr) {
+`function moveZero(arr) {
   let pointer = 0;
 
   for (let i = 0; i < arr.length; i++) {
@@ -249,7 +249,7 @@ function moveZero(arr) {
   }
 
   return arr;
-}
+}`
 ```
 
 **Complexity:** O(n) time, O(1) space.
